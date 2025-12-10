@@ -1,0 +1,142 @@
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.backButton {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.8rem 1.5rem;
+    background: white;
+    border: 2px solid #e0e0e0;
+    border-radius: 25px;
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    margin-bottom: 2rem;
+}
+
+.backButton:hover {
+    border-color: #f5576c;
+    transform: translateX(-5px);
+}
+
+.bonusHeader {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding: 3rem;
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    border-radius: 20px;
+    color: white;
+}
+
+.bonusIcon {
+    font-size: 5rem;
+    margin-bottom: 1rem;
+    animation: bounce 2s ease-in-out infinite;
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+.bonusHeader h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.description {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    opacity: 0.95;
+}
+
+.bonusType {
+    display: inline-block;
+    padding: 0.6rem 1.5rem;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 25px;
+    font-weight: 600;
+    text-transform: capitalize;
+    backdrop-filter: blur(10px);
+}
+
+.bonusContent {
+    background: white;
+    padding: 3rem;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.contentSection {
+    margin-bottom: 2rem;
+    line-height: 1.8;
+}
+
+.contentSection h2 {
+    color: #f5576c;
+    font-size: 1.8rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.contentSection h3 {
+    color: #333;
+    font-size: 1.3rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.8rem;
+}
+
+.contentSection p {
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+.contentSection ul,
+.contentSection ol {
+    margin-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.contentSection li {
+    margin-bottom: 0.5rem;
+    color: #555;
+}
+
+.contentSection strong {
+    color: #f5576c;
+    font-weight: 600;
+}
+
+.contentSection code {
+    background: #f8f9fa;
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    font-family: 'Courier New', monospace;
+    color: #f5576c;
+}
+
+@media (max-width: 768px) {
+    .bonusHeader {
+        padding: 2rem;
+    }
+
+    .bonusHeader h1 {
+        font-size: 1.8rem;
+    }
+
+    .bonusContent {
+        padding: 1.5rem;
+    }
+}
