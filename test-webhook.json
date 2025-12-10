@@ -1,0 +1,46 @@
+{
+    "event": "pix.paid",
+    "createdAt": {
+        "_seconds": 1754393130,
+        "_nanoseconds": 582000000
+    },
+    "customer": {
+        "name": "Cliente Teste",
+        "email": "teste@teste.com",
+        "document": null,
+        "phone": null,
+        "ip": "::1"
+    },
+    "payment": {
+        "id": "9f8fa5ee-b346-43ec-a032-ca2e504f6485",
+        "method": "pix.paid",
+        "status": "paid",
+        "amount": 9700
+    },
+    "product": {
+        "id": "8g6ug9Vr7zlmU2zx0prp",
+        "type": "main"
+    },
+    "products": [
+        {
+            "id": "8g6ug9Vr7zlmU2zx0prp",
+            "type": "main"
+        }
+    ],
+    "webhook": {
+        "id": "ivKsQqxetJc1q8d2hfKt",
+        "businessId": "MYLKdEN3ppZ1GIrLZTns4PNSvc21",
+        "events": [
+            "pix.paid",
+            "card.paid"
+        ]
+    },
+    "src": null,
+    "sck": null,
+    "utm_source": null,
+    "utm_campaign": null,
+    "utm_medium": null,
+    "utm_content": null,
+    "utm_term": null,
+    "customerIp": "::1"
+}
