@@ -1,41 +1,58 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
 
 :root {
-  /* Colors - Premium Palette */
-  --color-primary: hsl(260, 85%, 60%);
-  --color-primary-dark: hsl(260, 85%, 50%);
-  --color-primary-light: hsl(260, 85%, 70%);
-  
-  --color-secondary: hsl(320, 75%, 55%);
-  --color-accent: hsl(180, 70%, 50%);
-  
-  --color-success: hsl(145, 65%, 50%);
-  --color-warning: hsl(40, 95%, 55%);
-  --color-error: hsl(0, 75%, 55%);
-  
-  /* Neutrals */
-  --color-bg: hsl(240, 15%, 8%);
-  --color-bg-elevated: hsl(240, 12%, 12%);
-  --color-bg-card: hsl(240, 10%, 15%);
-  --color-bg-hover: hsl(240, 10%, 20%);
-  
-  --color-text: hsl(0, 0%, 95%);
-  --color-text-muted: hsl(0, 0%, 70%);
-  --color-text-subtle: hsl(0, 0%, 50%);
-  
-  --color-border: hsl(240, 10%, 25%);
-  --color-border-light: hsl(240, 8%, 30%);
-  
-  /* Gradients */
-  --gradient-primary: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
-  --gradient-accent: linear-gradient(135deg, var(--color-accent) 0%, var(--color-primary) 100%);
-  --gradient-success: linear-gradient(135deg, var(--color-success) 0%, var(--color-accent) 100%);
-  
-  /* Glass effect */
-  --glass-bg: rgba(255, 255, 255, 0.05);
-  --glass-border: rgba(255, 255, 255, 0.1);
-  --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-  
+  /* Colors - Navy Blue & White Theme */
+  --color-primary: #1e40af;
+  /* Navy Blue */
+  --color-primary-dark: #1e3a8a;
+  /* Dark Navy */
+  --color-primary-light: #3b82f6;
+  /* Light Blue */
+
+  --color-secondary: #2563eb;
+  /* Royal Blue */
+  --color-accent: #60a5fa;
+  /* Sky Blue */
+
+  --color-success: #10b981;
+  /* Green */
+  --color-warning: #f59e0b;
+  /* Amber */
+  --color-error: #ef4444;
+  /* Red */
+
+  /* Neutrals - Light Theme */
+  --color-bg: #ffffff;
+  /* White */
+  --color-bg-elevated: #f8fafc;
+  /* Very Light Gray */
+  --color-bg-card: #ffffff;
+  /* White */
+  --color-bg-hover: #f1f5f9;
+  /* Light Gray */
+
+  --color-text: #0f172a;
+  /* Navy Text */
+  --color-text-muted: #475569;
+  /* Gray Text */
+  --color-text-subtle: #94a3b8;
+  /* Light Gray Text */
+
+  --color-border: #e2e8f0;
+  /* Light Border */
+  --color-border-light: #cbd5e1;
+  /* Medium Border */
+
+  /* Gradients - Navy Blue */
+  --gradient-primary: linear-gradient(135deg, #1e40af 0%, #2563eb 100%);
+  --gradient-accent: linear-gradient(135deg, #3b82f6 0%, #60a5fa 100%);
+  --gradient-success: linear-gradient(135deg, #10b981 0%, #3b82f6 100%);
+
+  /* Glass effect - Light */
+  --glass-bg: rgba(255, 255, 255, 0.8);
+  --glass-border: rgba(30, 64, 175, 0.1);
+  --glass-shadow: 0 8px 32px 0 rgba(30, 64, 175, 0.1);
+
   /* Spacing */
   --spacing-xs: 0.5rem;
   --spacing-sm: 1rem;
@@ -43,20 +60,21 @@
   --spacing-lg: 2rem;
   --spacing-xl: 3rem;
   --spacing-2xl: 4rem;
-  
+
   /* Border Radius */
   --radius-sm: 0.5rem;
   --radius-md: 1rem;
   --radius-lg: 1.5rem;
   --radius-xl: 2rem;
   --radius-full: 9999px;
-  
-  /* Shadows */
-  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.1);
-  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.15);
-  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.2);
-  --shadow-xl: 0 16px 48px rgba(0, 0, 0, 0.3);
-  
+
+  /* Shadows - Light Theme */
+  --shadow-sm: 0 2px 8px rgba(30, 64, 175, 0.08);
+  --shadow-md: 0 4px 16px rgba(30, 64, 175, 0.12);
+  --shadow-lg: 0 8px 32px rgba(30, 64, 175, 0.16);
+  --shadow-xl: 0 16px 48px rgba(30, 64, 175, 0.2);
+  --shadow-2xl: 0 24px 64px rgba(30, 64, 175, 0.25);
+
   /* Transitions */
   --transition-fast: 150ms ease;
   --transition-base: 250ms ease;
@@ -92,7 +110,7 @@ a {
 }
 
 a:hover {
-  color: var(--color-primary-light);
+  color: var(--color-primary);
 }
 
 button {
@@ -160,6 +178,7 @@ select {
     opacity: 0;
     transform: translateY(20px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -171,6 +190,7 @@ select {
     opacity: 0;
     transform: translateX(-20px);
   }
+
   to {
     opacity: 1;
     transform: translateX(0);
@@ -178,9 +198,12 @@ select {
 }
 
 @keyframes pulse {
-  0%, 100% {
+
+  0%,
+  100% {
     opacity: 1;
   }
+
   50% {
     opacity: 0.5;
   }
@@ -194,7 +217,7 @@ select {
   animation: slideIn 0.6s ease forwards;
 }
 
-/* Scrollbar */
+/* Scrollbar - Navy Theme */
 ::-webkit-scrollbar {
   width: 10px;
 }
@@ -209,5 +232,5 @@ select {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--color-border-light);
+  background: var(--color-primary-light);
 }

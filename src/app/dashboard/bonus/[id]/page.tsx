@@ -5,9 +5,11 @@ import { notFound } from 'next/navigation'
 import styles from './bonus-detail.module.css'
 import Link from 'next/link'
 import ReactMarkdown from 'react-markdown'
+import { use } from 'react'
 
-export default function BonusDetailPage({ params }: { params: { id: string } }) {
-    const bonus = bonuses.find(b => b.id === params.id)
+export default function BonusDetailPage({ params }: { params: Promise<{ id: string }> }) {
+    const { id } = use(params)
+    const bonus = bonuses.find(b => b.id === id)
 
     if (!bonus) {
         notFound()
@@ -36,3 +38,4 @@ export default function BonusDetailPage({ params }: { params: { id: string } }) 
         </div>
     )
 }
+

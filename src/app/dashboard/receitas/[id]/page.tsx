@@ -4,9 +4,11 @@ import { recipes } from '@/data/recipes'
 import { notFound } from 'next/navigation'
 import styles from './receita.module.css'
 import Link from 'next/link'
+import { use } from 'react'
 
-export default function ReceitaPage({ params }: { params: { id: string } }) {
-    const recipe = recipes.find(r => r.id === params.id)
+export default function ReceitaPage({ params }: { params: Promise<{ id: string }> }) {
+    const { id } = use(params)
+    const recipe = recipes.find(r => r.id === id)
 
     if (!recipe) {
         notFound()
@@ -96,3 +98,4 @@ export default function ReceitaPage({ params }: { params: { id: string } }) {
         </div>
     )
 }
+

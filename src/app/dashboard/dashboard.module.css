@@ -1,17 +1,15 @@
 .container {
     min-height: 100vh;
     padding-bottom: var(--spacing-2xl);
+    background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
 }
 
 .header {
     background: var(--glass-bg);
     backdrop-filter: blur(20px);
-    border-bottom: 1px solid var(--glass-border);
-    padding: var(--spacing-lg) 0;
-    margin-bottom: var(--spacing-xl);
-    position: sticky;
-    top: 0;
-    z-index: 100;
+    border-bottom: 2px solid var(--color-border);
+    padding: var(--spacing-xl) 0;
+    margin-bottom: var(--spacing-2xl);
 }
 
 .headerContent {
@@ -24,7 +22,7 @@
 }
 
 .welcomeTitle {
-    font-size: 1.75rem;
+    font-size: 2.5rem;
     font-weight: 800;
     background: var(--gradient-primary);
     -webkit-background-clip: text;
@@ -35,298 +33,178 @@
 
 .welcomeSubtitle {
     color: var(--color-text-muted);
-    font-size: 0.95rem;
+    font-size: 1.1rem;
 }
 
 .logoutButton {
-    padding: var(--spacing-sm) var(--spacing-lg);
-    background: var(--color-bg-elevated);
-    border: 1px solid var(--color-border);
+    padding: var(--spacing-sm) var(--spacing-xl);
+    background: white;
+    border: 2px solid var(--color-primary);
     border-radius: var(--radius-full);
-    color: var(--color-text-muted);
+    color: var(--color-primary);
     font-weight: 600;
+    font-size: 1rem;
     transition: all var(--transition-base);
 }
 
 .logoutButton:hover {
-    background: var(--color-bg-hover);
-    color: var(--color-text);
-    border-color: var(--color-border-light);
+    background: var(--color-primary);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
 }
 
 .stats {
     max-width: 1200px;
-    margin: 0 auto var(--spacing-xl);
+    margin: 0 auto var(--spacing-2xl);
     padding: 0 var(--spacing-md);
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: var(--spacing-md);
-}
-
-.statCard {
-    background: var(--glass-bg);
-    backdrop-filter: blur(10px);
-    border: 1px solid var(--glass-border);
-    border-radius: var(--radius-lg);
-    padding: var(--spacing-lg);
-    display: flex;
-    align-items: center;
-    gap: var(--spacing-md);
-    transition: all var(--transition-base);
-}
-
-.statCard:hover {
-    transform: translateY(-4px);
-    border-color: var(--color-primary);
-    box-shadow: var(--shadow-lg);
-}
-
-.statIcon {
-    font-size: 2.5rem;
-}
-
-.statValue {
-    font-size: 1.5rem;
-    font-weight: 800;
-    color: var(--color-text);
-    line-height: 1;
-    margin-bottom: var(--spacing-xs);
-}
-
-.statLabel {
-    font-size: 0.875rem;
-    color: var(--color-text-muted);
-}
-
-.tabs {
-    max-width: 1200px;
-    margin: 0 auto var(--spacing-xl);
-    padding: 0 var(--spacing-md);
-    display: flex;
-    gap: var(--spacing-sm);
-    border-bottom: 2px solid var(--color-border);
-}
-
-.tab {
-    padding: var(--spacing-md) var(--spacing-lg);
-    background: transparent;
-    color: var(--color-text-muted);
-    font-weight: 600;
-    font-size: 1rem;
-    border: none;
-    border-bottom: 3px solid transparent;
-    margin-bottom: -2px;
-    transition: all var(--transition-base);
-    display: flex;
-    align-items: center;
-    gap: var(--spacing-xs);
-}
-
-.tab:hover {
-    color: var(--color-text);
-    background: var(--color-bg-hover);
-}
-
-.tabActive {
-    color: var(--color-primary);
-    border-bottom-color: var(--color-primary);
-}
-
-.tabIcon {
-    font-size: 1.25rem;
-}
-
-.categories {
-    max-width: 1200px;
-    margin: 0 auto var(--spacing-xl);
-    padding: 0 var(--spacing-md);
-    display: flex;
-    gap: var(--spacing-sm);
-    overflow-x: auto;
-    padding-bottom: var(--spacing-sm);
-}
-
-.categories::-webkit-scrollbar {
-    height: 6px;
-}
-
-.categoryButton {
-    padding: var(--spacing-sm) var(--spacing-md);
-    background: var(--color-bg-elevated);
-    border: 1px solid var(--color-border);
-    border-radius: var(--radius-full);
-    color: var(--color-text-muted);
-    font-weight: 600;
-    font-size: 0.875rem;
-    white-space: nowrap;
-    transition: all var(--transition-base);
-    display: flex;
-    align-items: center;
-    gap: var(--spacing-xs);
-}
-
-.categoryButton:hover {
-    background: var(--color-bg-hover);
-    border-color: var(--color-border-light);
-    color: var(--color-text);
-}
-
-.categoryActive {
-    background: var(--gradient-primary);
-    border-color: transparent;
-    color: white;
-}
-
-.categoryIcon {
-    font-size: 1.1rem;
-}
-
-.grid {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 var(--spacing-md);
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: var(--spacing-lg);
 }
 
-.card {
-    background: var(--glass-bg);
-    backdrop-filter: blur(10px);
-    border: 1px solid var(--glass-border);
-    border-radius: var(--radius-lg);
-    overflow: hidden;
+.statCard {
+    background: white;
+    border: 2px solid var(--color-border);
+    border-radius: var(--radius-xl);
+    padding: var(--spacing-xl);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-lg);
     transition: all var(--transition-base);
-    animation: fadeIn 0.6s ease forwards;
+    box-shadow: var(--shadow-sm);
 }
 
-.card:hover {
+.statCard:hover {
     transform: translateY(-8px);
     border-color: var(--color-primary);
     box-shadow: var(--shadow-xl);
 }
 
-.cardImage {
-    width: 100%;
-    height: 180px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 5rem;
-    background: var(--color-bg-elevated);
-    border-bottom: 1px solid var(--color-border);
+.statIcon {
+    font-size: 3.5rem;
+    filter: grayscale(0);
 }
 
-.cardContent {
-    padding: var(--spacing-lg);
+.statValue {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--color-primary);
+    line-height: 1;
+    margin-bottom: var(--spacing-xs);
 }
 
-.cardTitle {
-    font-size: 1.25rem;
-    font-weight: 700;
-    margin-bottom: var(--spacing-sm);
-    color: var(--color-text);
-}
-
-.cardDescription {
+.statLabel {
+    font-size: 1rem;
     color: var(--color-text-muted);
-    font-size: 0.9rem;
-    margin-bottom: var(--spacing-md);
-    line-height: 1.5;
+    font-weight: 500;
 }
 
-.cardMeta {
-    display: flex;
-    gap: var(--spacing-md);
-    margin-bottom: var(--spacing-md);
-}
-
-.metaItem {
-    font-size: 0.875rem;
-    color: var(--color-text-subtle);
-    display: flex;
-    align-items: center;
-    gap: var(--spacing-xs);
-}
-
-.cardButton {
-    width: 100%;
-    padding: var(--spacing-sm) var(--spacing-md);
-    background: var(--gradient-primary);
-    color: white;
-    border-radius: var(--radius-md);
-    font-weight: 600;
-    transition: all var(--transition-base);
-}
-
-.cardButton:hover {
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-md);
-}
-
-.guidesList {
+.mainContent {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 var(--spacing-md);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    gap: var(--spacing-2xl);
+}
+
+.mainCard {
+    background: white;
+    border: 3px solid var(--color-border);
+    border-radius: var(--radius-xl);
+    padding: var(--spacing-2xl);
     display: flex;
     flex-direction: column;
-    gap: var(--spacing-md);
-}
-
-.guideCard {
-    background: var(--glass-bg);
-    backdrop-filter: blur(10px);
-    border: 1px solid var(--glass-border);
-    border-radius: var(--radius-lg);
-    padding: var(--spacing-lg);
-    display: flex;
     align-items: center;
-    gap: var(--spacing-lg);
+    text-align: center;
+    gap: var(--spacing-xl);
     transition: all var(--transition-base);
-    animation: fadeIn 0.6s ease forwards;
+    text-decoration: none;
+    color: inherit;
+    position: relative;
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
 }
 
-.guideCard:hover {
-    transform: translateX(8px);
+.mainCard::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 6px;
+    background: var(--gradient-primary);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.mainCard:hover::before {
+    transform: scaleX(1);
+}
+
+.mainCard:hover {
+    transform: translateY(-16px);
     border-color: var(--color-primary);
-    box-shadow: var(--shadow-lg);
+    box-shadow: var(--shadow-2xl);
 }
 
-.guideIcon {
-    font-size: 3rem;
-    flex-shrink: 0;
+.mainCardIcon {
+    font-size: 6rem;
+    animation: float 3s ease-in-out infinite;
+    filter: drop-shadow(0 4px 8px rgba(30, 64, 175, 0.2));
 }
 
-.guideContent {
-    flex: 1;
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
 }
 
-.guideTitle {
-    font-size: 1.25rem;
-    font-weight: 700;
-    margin-bottom: var(--spacing-xs);
-    color: var(--color-text);
+.mainCardContent h2 {
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: var(--spacing-md);
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
-.guideDescription {
+.mainCardContent p {
     color: var(--color-text-muted);
-    font-size: 0.95rem;
-    line-height: 1.5;
+    line-height: 1.8;
+    font-size: 1.1rem;
+    margin-bottom: var(--spacing-lg);
 }
 
-.guideButton {
-    padding: var(--spacing-sm) var(--spacing-lg);
+.mainCardButton {
+    display: inline-block;
+    padding: var(--spacing-md) var(--spacing-2xl);
     background: var(--gradient-primary);
     color: white;
     border-radius: var(--radius-full);
-    font-weight: 600;
-    white-space: nowrap;
+    font-weight: 700;
+    font-size: 1.1rem;
     transition: all var(--transition-base);
+    box-shadow: var(--shadow-md);
 }
 
-.guideButton:hover {
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-md);
+.mainCard:hover .mainCardButton {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+}
+
+@media (max-width: 1024px) {
+    .mainContent {
+        grid-template-columns: 1fr;
+    }
 }
 
 @media (max-width: 768px) {
@@ -337,27 +215,22 @@
     }
 
     .welcomeTitle {
-        font-size: 1.5rem;
+        font-size: 2rem;
     }
 
     .stats {
         grid-template-columns: 1fr;
     }
 
-    .tabs {
-        justify-content: center;
+    .mainCard {
+        padding: var(--spacing-xl);
     }
 
-    .categories {
-        justify-content: flex-start;
+    .mainCardIcon {
+        font-size: 4rem;
     }
 
-    .grid {
-        grid-template-columns: 1fr;
-    }
-
-    .guideCard {
-        flex-direction: column;
-        text-align: center;
+    .mainCardContent h2 {
+        font-size: 1.5rem;
     }
 }
