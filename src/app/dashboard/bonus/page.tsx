@@ -15,10 +15,15 @@ export default function BonusPage() {
             <div className={styles.bonusGrid}>
                 {bonuses.map(bonus => (
                     <Link href={`/dashboard/bonus/${bonus.id}`} key={bonus.id} className={styles.bonusCard}>
-                        <div className={styles.bonusIcon}>{bonus.icon}</div>
-                        <h3>{bonus.title}</h3>
-                        <p>{bonus.description}</p>
-                        <span className={styles.bonusType}>{bonus.type}</span>
+                        <div className={styles.imageContainer}>
+                            <img src={bonus.image} alt={bonus.title} className={styles.bonusImage} />
+                            <div className={styles.bonusIconOverlay}>{bonus.icon}</div>
+                        </div>
+                        <div className={styles.cardContent}>
+                            <h3>{bonus.title}</h3>
+                            <p>{bonus.description}</p>
+                            <span className={styles.bonusType}>{bonus.type}</span>
+                        </div>
                     </Link>
                 ))}
             </div>

@@ -21,11 +21,13 @@ export default function BonusDetailPage({ params }: { params: Promise<{ id: stri
                 ← Voltar para bônus
             </Link>
 
-            <div className={styles.bonusHeader}>
-                <div className={styles.bonusIcon}>{bonus.icon}</div>
-                <h1>{bonus.title}</h1>
-                <p className={styles.description}>{bonus.description}</p>
-                <span className={styles.bonusType}>{bonus.type}</span>
+            <div className={styles.heroSection} style={{ backgroundImage: `url(${bonus.image})` }}>
+                <div className={styles.heroOverlay}>
+                    <div className={styles.bonusIcon}>{bonus.icon}</div>
+                    <h1>{bonus.title}</h1>
+                    <p className={styles.description}>{bonus.description}</p>
+                    <span className={styles.bonusType}>{bonus.type}</span>
+                </div>
             </div>
 
             <div className={styles.bonusContent}>

@@ -11,15 +11,13 @@
 
 .header h1 {
     font-size: 3rem;
-    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: var(--color-primary);
     margin-bottom: 1rem;
 }
 
 .header p {
     font-size: 1.2rem;
-    color: #666;
+    color: #64748b;
 }
 
 .bonusGrid {
@@ -30,77 +28,89 @@
 
 .bonusCard {
     background: white;
-    padding: 2.5rem;
     border-radius: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
     transition: all 0.3s ease;
     text-decoration: none;
     color: inherit;
-    text-align: center;
-    position: relative;
     overflow: hidden;
-}
-
-.bonusCard::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 5px;
-    background: linear-gradient(90deg, #f093fb 0%, #f5576c 100%);
-    transform: scaleX(0);
-    transition: transform 0.3s ease;
-}
-
-.bonusCard:hover::before {
-    transform: scaleX(1);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    border: 1px solid #e2e8f0;
 }
 
 .bonusCard:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+    transform: translateY(-8px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    border-color: var(--color-primary);
 }
 
-.bonusIcon {
-    font-size: 4rem;
-    margin-bottom: 1.5rem;
-    animation: float 3s ease-in-out infinite;
+.imageContainer {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
 }
 
-@keyframes float {
-
-    0%,
-    100% {
-        transform: translateY(0);
-    }
-
-    50% {
-        transform: translateY(-10px);
-    }
+.bonusImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
 }
 
-.bonusCard h3 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-    color: #333;
+.bonusCard:hover .bonusImage {
+    transform: scale(1.05);
 }
 
-.bonusCard p {
-    color: #666;
+.bonusIconOverlay {
+    position: absolute;
+    bottom: -25px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 2px solid var(--color-primary);
+}
+
+.cardContent {
+    padding: 2rem 1.5rem 1.5rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.cardContent h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+    color: var(--color-primary);
+    font-weight: 700;
+}
+
+.cardContent p {
+    color: #64748b;
     line-height: 1.6;
     margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+    flex: 1;
 }
 
 .bonusType {
     display: inline-block;
-    padding: 0.5rem 1rem;
-    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-    color: white;
+    padding: 0.4rem 1rem;
+    background: #eff6ff;
+    color: var(--color-primary);
     border-radius: 20px;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     font-weight: 600;
     text-transform: capitalize;
+    align-self: flex-start;
 }
 
 @media (max-width: 768px) {
